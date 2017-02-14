@@ -10,12 +10,12 @@
 
   "Praise and 'complement' may help you separate the wheat from the chaff"
   (= [:wheat "wheat" 'wheat]
-       (let [not-nil? ___]
+       (let [not-nil? (complement nil?)]
          (filter not-nil? [nil :wheat nil "wheat" nil 'wheat nil])))
 
   "Partial functions allow procrastination"
   (= 20 (let [multiply-by-5 (partial * 5)]
-          (___ __)))
+          (multiply-by-5 4)))
 
   "Don't forget: first things first"
   (= [__ __ __ __]
