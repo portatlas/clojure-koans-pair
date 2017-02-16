@@ -3,21 +3,35 @@
 
 (defn is-even? [n]
   (if (= n 0)
-    __
-    (___ (is-even? (dec n)))))
+    true
+    (not (is-even? (dec n)))))
 
 (defn is-even-bigint? [n]
   (loop [n   n
          acc true]
     (if (= n 0)
-      __
+      acc
       (recur (dec n) (not acc)))))
 
+;; base return the new reversed collection when the old collection is zero
+;; body will take the last item and add it to the new collection
+
 (defn recursive-reverse [coll]
-  __)
+  (loop [coll coll
+         rev_coll ()]
+      (if (= () coll)
+        rev_coll
+      (recur (rest coll) (cons (first coll) rev_coll)))))
+
+;; base case if n <= 1 return 1
+;; else multiple n by n less 1
 
 (defn factorial [n]
-  __)
+  (loop [n n
+         fac 1]
+  (if (<= n 1)
+    fac
+    (recur (dec n) (* n fac)))))
 
 (meditations
   "Recursion ends with a base case"
