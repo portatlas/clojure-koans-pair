@@ -30,6 +30,9 @@
   (= 2400 (reduce (fn [a b] (* a b)) 100 [1 2 3 4]))
 
   "Numbers are not the only things one can reduce"
+
+;------------------------REVIEW---------------------
   (= "longest" (reduce (fn [a b]
                          (if (< (count a) (count b)) b a))
+                         ; (if (< __ __) b a))
                        ["which" "word" "is" "longest"])))

@@ -6,10 +6,12 @@
     true
     (not (is-even? (dec n)))))
 
+;------------------------REVIEW---------------------
 (defn is-even-bigint? [n]
   (loop [n   n
          acc true]
     (if (= n 0)
+      ; __
       acc
       (recur (dec n) (not acc)))))
 

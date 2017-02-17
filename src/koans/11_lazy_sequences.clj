@@ -23,6 +23,8 @@
   (= [:a :a :a :a :a :a :a :a :a :a]
      (repeat 10 :a))
 
+;------------------------REVIEW---------------------
   "Iteration can be used for repetition"
   (= (repeat 100 :hello)
+     ; (take 100 (iterate ___ :hello))))
      (take 100 (iterate #(keyword %) :hello))))
